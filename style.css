@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+header h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:24px;
+    color:cyan;
+}
+
+section{
+    padding:80px 10%;
+}
+
+h2{
+    font-size:40px;
+    margin-bottom:20px;
+    color:cyan;
+}
+
+.about p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.skills ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.skills li{
+    background:#1e1e1e;
+    padding:15px 25px;
+    border-radius:10px;
+    border:1px solid cyan;
+}
