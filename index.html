@@ -74,15 +74,10 @@ section{padding:100px 6%;}
 .tag{background:rgba(34,197,94,0.12);color:var(--green);padding:5px 14px;border-radius:50px;font-size:12px;font-weight:500;}
 .lead-badge{display:inline-block;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);color:var(--green);font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:4px;margin-bottom:10px;}
 
-/* VIDEO PLAY OVERLAY on card */
-.play-overlay{position:absolute;top:0;left:0;right:0;height:220px;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0);transition:background .3s;opacity:0;}
-.project-card:hover .play-overlay{opacity:1;background:rgba(0,0,0,0.45);}
-.play-btn-circle{width:60px;height:60px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(34,197,94,0.5);transition:transform .2s;}
-.play-btn-circle svg{width:22px;height:22px;fill:#000;margin-left:4px;}
-.project-card:hover .play-btn-circle{transform:scale(1.1);}
-
-/* has-video badge */
-.video-badge{position:absolute;top:12px;right:12px;background:rgba(34,197,94,0.9);color:#000;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:50px;}
+/* WATCH DEMO button — shows below tags on hover */
+.watch-demo-btn{display:flex;align-items:center;gap:8px;margin-top:14px;background:var(--green);color:#000;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:10px 20px;border-radius:50px;width:fit-content;opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s;pointer-events:none;}
+.watch-demo-btn svg{width:14px;height:14px;fill:#000;flex-shrink:0;}
+.project-card:hover .watch-demo-btn{opacity:1;transform:translateY(0);pointer-events:all;}
 
 /* VIDEO MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
@@ -192,14 +187,8 @@ footer{text-align:center;padding:32px;border-top:1px solid rgba(255,255,255,0.06
     </div>
 
     <!-- Project 2: CIPLA — HAS VIDEO -->
-    <div class="project-card" onclick="openVideo('1FmmJQlB5njbkIxGaXZEYZhztktxd-kb0', 'Tablet Press Machine VR — CIPLA')">
+    <div class="project-card">
       <img src="Satyaproject_CiplaVR.png" alt="Cipla VR">
-      <div class="play-overlay">
-        <div class="play-btn-circle">
-          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-        </div>
-      </div>
-      <span class="video-badge">▶ Watch Demo</span>
       <div class="project-body">
         <div class="project-highlight">Pharma · CIPLA</div>
         <div class="lead-badge">Project Lead</div>
@@ -207,6 +196,10 @@ footer{text-align:center;padding:32px;border-top:1px solid rgba(255,255,255,0.06
         <p class="project-desc">Immersive VR simulation for CIPLA training staff on dismantling and assembling tablet pressing machines — 3 machine types, step-by-step guided workflows.</p>
         <div class="project-meta"><span>🥽 Meta Quest</span><span>🙌 Hand Tracking</span></div>
         <div class="tags"><span class="tag">Unity</span><span class="tag">VR</span><span class="tag">Pharma</span></div>
+        <div class="watch-demo-btn" onclick="openVideo('1FmmJQlB5njbkIxGaXZEYZhztktxd-kb0', 'Tablet Press Machine VR — CIPLA')">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          Watch Demo
+        </div>
       </div>
     </div>
 
@@ -233,6 +226,10 @@ footer{text-align:center;padding:32px;border-top:1px solid rgba(255,255,255,0.06
         <p class="project-desc">VR training simulator for Indian Army soldiers — realistic INSAS AR-1B dismantling, assembly and evaluation system. Trained 30+ soldiers. Full hand tracking, no controllers.</p>
         <div class="project-meta"><span>👥 Team: 4</span><span>🪖 30+ Soldiers</span></div>
         <div class="tags"><span class="tag">Unity</span><span class="tag">Meta Quest</span><span class="tag">Hand Tracking</span></div>
+        <div class="watch-demo-btn" onclick="openVideo('1MX2Z41LOMnCqCY-sDWrLN1l2iNksUzOA', 'INSAS Gun VR Simulation — Indian Army')">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          Watch Demo
+        </div>
       </div>
     </div>
 
@@ -246,6 +243,10 @@ footer{text-align:center;padding:32px;border-top:1px solid rgba(255,255,255,0.06
         <p class="project-desc">VR truck maintenance training with 10+ guided modules — animated engine systems, gearbox simulation, fuel systems. Full hand tracking, no controllers. Data collection to delivery.</p>
         <div class="project-meta"><span>👥 Team: 7</span><span>📦 10+ Modules</span></div>
         <div class="tags"><span class="tag">Unity</span><span class="tag">Meta Quest</span><span class="tag">Hand Tracking</span></div>
+        <div class="watch-demo-btn" onclick="openVideo('1lCMIM0bgtE_BqzLE0kr7lOImra2fA_Ny', 'VR Truck Maintenance Simulator — Indian Army')">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          Watch Demo
+        </div>
       </div>
     </div>
 
@@ -259,6 +260,10 @@ footer{text-align:center;padding:32px;border-top:1px solid rgba(255,255,255,0.06
         <p class="project-desc">Full driving simulator with steering wheel, pedals, gearbox & 6-DOF motion platform. Multi-level training — basics to advanced in multiple environments with dynamic weather & traffic AI. Trained 45+ soldiers for 1 month on-site.</p>
         <div class="project-meta"><span>👥 Team: 6</span><span>🪖 45+ Soldiers</span></div>
         <div class="tags"><span class="tag">PC + VR</span><span class="tag">Motion Platform</span><span class="tag">Traffic AI</span></div>
+        <div class="watch-demo-btn" onclick="openVideo('13qoaop2LfNRV-qviHeHNXhFfsE94kjD5', 'Army Driving Simulator — Indian Army')">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          Watch Demo
+        </div>
       </div>
     </div>
 
